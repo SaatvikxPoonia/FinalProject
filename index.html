@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancing Content Discovery Through A/B Testing and Deep Linking - B.Tech Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <span class="theme-icon">🌙</span>
+    </button>
+
+    <!-- Mode Toggle -->
+    <div class="mode-toggle">
+        <button id="presentation-mode" class="btn btn--sm mode-btn active">Presentation</button>
+        <button id="documentation-mode" class="btn btn--sm mode-btn">Documentation</button>
+        <button id="hybrid-mode" class="btn btn--sm mode-btn">Hybrid</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-header">
+            <h3>Navigation</h3>
+            <button id="nav-toggle" class="nav-toggle">☰</button>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#section-1" data-section="1">Introduction</a></li>
+            <li><a href="#section-2" data-section="2">Architecture</a></li>
+            <li><a href="#section-3" data-section="3">A/B Testing</a></li>
+            <li><a href="#section-4" data-section="4">Deep Linking</a></li>
+            <li><a href="#section-5" data-section="5">Database Optimization</a></li>
+            <li><a href="#section-6" data-section="6">ML Integration</a></li>
+            <li><a href="#section-7" data-section="7">Results</a></li>
+            <li><a href="#section-8" data-section="8">Future Work</a></li>
+        </ul>
+    </nav>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <span class="progress-text" id="progress-text">0%</span>
+    </div>
+
+    <!-- Navigation Controls -->
+    <div class="nav-controls">
+        <button id="prev-btn" class="btn btn--outline nav-btn">← Previous</button>
+        <button id="next-btn" class="btn btn--outline nav-btn">Next →</button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container" id="main-container">
+        <!-- Presentation Panel -->
+        <div class="presentation-panel" id="presentation-panel">
+            
+            <!-- Section 1: Introduction -->
+            <section class="slide active" id="section-1" data-section="1">
+                <div class="slide-content">
+                    <h1>Enhancing Content Discovery</h1>
+                    <h2>Through A/B Testing and Deep Linking</h2>
+                    <div class="student-info">
+                        <p><strong>Gaurav Sindhu</strong> (LCS2021008)</p>
+                        <p>Indian Institute of Information Technology, Lucknow</p>
+                        <p>Supervisor: Dr. Saurabh Shukla</p>
+                        <p>Internship at Eternal (formerly Zomato)</p>
+                    </div>
+                    <div class="key-metrics">
+                        <div class="metric">
+                            <span class="metric-value">97.3%</span>
+                            <span class="metric-label">Cost Reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">4</span>
+                            <span class="metric-label">A/B Experiments</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">2 Crore</span>
+                            <span class="metric-label">Ads Processed</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Architecture -->
+            <section class="slide" id="section-2" data-section="2">
+                <div class="slide-content">
+                    <h2>Technical Architecture</h2>
+                    <div class="architecture-diagram">
+                        <div class="arch-component">
+                            <h4>Discovery Framework</h4>
+                            <p>Modular ranked entity serving</p>
+                        </div>
+                        <div class="arch-component">
+                            <h4>ML Ranking Engine</h4>
+                            <p>Real-time feature extraction</p>
+                        </div>
+                        <div class="arch-component">
+                            <h4>A/B Testing Platform</h4>
+                            <p>Week-on-week metrics</p>
+                        </div>
+                        <div class="arch-component">
+                            <h4>Integration Pipeline</h4>
+                            <p>Google Ads + AppsFlyer</p>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-item">Go (Golang)</span>
+                        <span class="tech-item">DynamoDB</span>
+                        <span class="tech-item">Redis</span>
+                        <span class="tech-item">gRPC</span>
+                        <span class="tech-item">Grafana</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: A/B Testing -->
+            <section class="slide" id="section-3" data-section="3">
+                <div class="slide-content">
+                    <h2>A/B Testing Framework</h2>
+                    <div class="experiment-grid">
+                        <div class="experiment-card">
+                            <h4>CTR Optimization</h4>
+                            <p>Control group using click-through rate optimization</p>
+                            <span class="status status--info">exp1-cg</span>
+                        </div>
+                        <div class="experiment-card">
+                            <h4>OTR Ranking</h4>
+                            <p>Order-through rate optimization for conversions</p>
+                            <span class="status status--success">exp1-tg</span>
+                        </div>
+                        <div class="experiment-card">
+                            <h4>Geographic Personalization</h4>
+                            <p>S2 cell-based indexing at depth 13</p>
+                            <span class="status status--success">exp2-tg</span>
+                        </div>
+                        <div class="experiment-card">
+                            <h4>City-wise Ranking</h4>
+                            <p>Property metadata signal-based ordering</p>
+                            <span class="status status--warning">exp2-tg</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Deep Linking -->
+            <section class="slide" id="section-4" data-section="4">
+                <div class="slide-content">
+                    <h2>Deep Link Resolution System</h2>
+                    <div class="process-flow">
+                        <div class="flow-step">
+                            <div class="step-number">1</div>
+                            <h4>Ad Campaign Creation</h4>
+                            <p>Google Ads API integration</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">2</div>
+                            <h4>Deep Link Generation</h4>
+                            <p>Deferred resolution system</p>
+                        </div>
+                        <div class="flow-arrow">→</div>
+                        <div class="flow-step">
+                            <div class="step-number">3</div>
+                            <h4>Attribution Tracking</h4>
+                            <p>AppsFlyer integration</p>
+                        </div>
+                    </div>
+                    <div class="coverage-stats">
+                        <div class="coverage-item">
+                            <span class="coverage-value">2 Crore</span>
+                            <span class="coverage-label">Total Unique Ads</span>
+                        </div>
+                        <div class="coverage-item">
+                            <span class="coverage-value">28,000</span>
+                            <span class="coverage-label">Initial Coverage</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Database Optimization -->
+            <section class="slide" id="section-5" data-section="5">
+                <div class="slide-content">
+                    <h2>Database Optimization</h2>
+                    <div class="cost-reduction-chart">
+                        <div class="chart-container">
+                            <div class="chart-bar before">
+                                <span class="bar-value">128M RCUs</span>
+                                <div class="bar before-bar"></div>
+                                <span class="bar-label">Before</span>
+                            </div>
+                            <div class="chart-bar after">
+                                <span class="bar-value">3.5M RCUs</span>
+                                <div class="bar after-bar"></div>
+                                <span class="bar-label">After</span>
+                            </div>
+                        </div>
+                        <div class="reduction-highlight">
+                            <span class="reduction-value">97.3%</span>
+                            <span class="reduction-label">Cost Reduction</span>
+                        </div>
+                    </div>
+                    <div class="optimization-methods">
+                        <div class="method">Multi-layer Caching</div>
+                        <div class="method">Query Optimization</div>
+                        <div class="method">Worker Pool Design</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: ML Integration -->
+            <section class="slide" id="section-6" data-section="6">
+                <div class="slide-content">
+                    <h2>Machine Learning Integration</h2>
+                    <div class="ml-pipeline">
+                        <div class="ml-step">
+                            <h4>Feature Extraction</h4>
+                            <p>Real-time signal processing</p>
+                        </div>
+                        <div class="ml-step">
+                            <h4>Ranking Algorithm</h4>
+                            <p>ML-based rail positioning</p>
+                        </div>
+                        <div class="ml-step">
+                            <h4>Personalization</h4>
+                            <p>Geographic and behavioral signals</p>
+                        </div>
+                    </div>
+                    <div class="ml-benefits">
+                        <div class="benefit">
+                            <span class="benefit-icon">🎯</span>
+                            <span>Dynamic Rail Ranking</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">📈</span>
+                            <span>Improved Engagement</span>
+                        </div>
+                        <div class="benefit">
+                            <span class="benefit-icon">⚡</span>
+                            <span>Real-time Processing</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Results -->
+            <section class="slide" id="section-7" data-section="7">
+                <div class="slide-content">
+                    <h2>Performance Results</h2>
+                    <div class="results-grid">
+                        <div class="result-card positive">
+                            <h4>Artist</h4>
+                            <span class="result-value">+0.38%</span>
+                        </div>
+                        <div class="result-card positive">
+                            <h4>Event</h4>
+                            <span class="result-value">+9.39%</span>
+                        </div>
+                        <div class="result-card positive">
+                            <h4>Movie</h4>
+                            <span class="result-value">+0.57%</span>
+                        </div>
+                        <div class="result-card negative">
+                            <h4>Gig</h4>
+                            <span class="result-value">-0.34%</span>
+                        </div>
+                        <div class="result-card negative">
+                            <h4>Restaurant</h4>
+                            <span class="result-value">-10.00%</span>
+                        </div>
+                    </div>
+                    <div class="key-achievements">
+                        <h4>Key Business Impact</h4>
+                        <ul>
+                            <li>Significant cost reduction in database operations</li>
+                            <li>Enhanced user engagement via ML-driven ranking</li>
+                            <li>Established robust experimentation platform</li>
+                            <li>Addressed critical attribution gaps</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: Future Work -->
+            <section class="slide" id="section-8" data-section="8">
+                <div class="slide-content">
+                    <h2>Future Work & Conclusions</h2>
+                    <div class="future-items">
+                        <div class="future-item">
+                            <h4>User-specific Personalization</h4>
+                            <p>Browsing history and time preferences</p>
+                        </div>
+                        <div class="future-item">
+                            <h4>Multivariate Experimentation</h4>
+                            <p>Automated winner selection</p>
+                        </div>
+                        <div class="future-item">
+                            <h4>Real-time Deep Link Syncing</h4>
+                            <p>Webhook integrations</p>
+                        </div>
+                        <div class="future-item">
+                            <h4>Cross-platform Expansion</h4>
+                            <p>Travel and groceries verticals</p>
+                        </div>
+                    </div>
+                    <div class="conclusion">
+                        <h4>Project Learnings</h4>
+                        <div class="learning-categories">
+                            <div class="learning-category">
+                                <h5>Technical</h5>
+                                <p>Go mastery, DynamoDB optimization, API integration</p>
+                            </div>
+                            <div class="learning-category">
+                                <h5>Professional</h5>
+                                <p>Cross-functional collaboration, impact prioritization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Content Panel -->
+        <div class="content-panel" id="content-panel">
+            
+            <!-- Detailed Content for Section 1 -->
+            <div class="content-section active" data-section="1">
+                <h2>Project Introduction and Overview</h2>
+                <p>This B.Tech project, conducted during a 6-month internship at Eternal (formerly Zomato) from January to June 2025, focuses on enhancing content discovery mechanisms through sophisticated A/B testing methodologies and deep link resolution systems.</p>
+                
+                <h3>Project Context</h3>
+                <p>Working within the Search and Discovery team of the District vertical, this project addressed critical challenges in content personalization and marketing attribution. The existing system suffered from inefficient database operations and lacked sophisticated ranking mechanisms for content discovery.</p>
+                
+                <h3>Key Achievements Summary</h3>
+                <ul>
+                    <li><strong>Cost Optimization:</strong> Achieved a remarkable 97.3% reduction in DynamoDB read costs, decreasing from over 128 million RCUs to under 3.5 million RCUs daily, resulting in tens of thousands of rupees in monthly savings.</li>
+                    <li><strong>Machine Learning Integration:</strong> Successfully replaced static dashboard configurations with ML-based rail ranking systems that adapt to user behavior and content performance metrics.</li>
+                    <li><strong>Attribution System:</strong> Built a comprehensive deferred deep link resolution system that significantly improved app attribution for marketing campaigns.</li>
+                    <li><strong>Experimental Framework:</strong> Conducted 4 major A/B experiments with measurable engagement improvements across different content categories.</li>
+                    <li><strong>Scalable Architecture:</strong> Designed and implemented microservices architecture using gRPC and worker pools for high-throughput operations.</li>
+                </ul>
+                
+                <h3>Technical Environment</h3>
+                <p>The project leveraged a modern tech stack including Go (Golang) for backend services, Amazon DynamoDB and Redis for data storage and caching, Google Ads API and AppsFlyer for marketing integrations, and comprehensive monitoring through Grafana with structured logging and distributed tracing.</p>
+                
+                <h3>Project Significance</h3>
+                <p>This work demonstrates the practical application of machine learning and experimental design in production systems, showcasing how data-driven approaches can simultaneously improve user experience and reduce operational costs. The project bridges theoretical computer science concepts with real-world business impact, making it an ideal capstone for B.Tech studies.</p>
+            </div>
+
+            <!-- Detailed Content for Section 2 -->
+            <div class="content-section" data-section="2">
+                <h2>Technical Architecture Deep Dive</h2>
+                <p>The system architecture follows microservices principles with emphasis on scalability, maintainability, and performance optimization. The design accommodates high-throughput requirements while maintaining system reliability and cost efficiency.</p>
+                
+                <h3>Modular Discovery Framework</h3>
+                <p>The core discovery framework implements a ranked entity serving system that processes millions of content requests daily. The framework utilizes a plugin-based architecture allowing for easy integration of new ranking algorithms and content types without affecting the core system stability.</p>
+                
+                <h3>ML-based Ranking Engine</h3>
+                <p>The machine learning component replaced traditional static configurations with dynamic ranking based on real-time feature extraction. Features include user engagement metrics, content freshness, geographic relevance, and temporal patterns. The ranking engine processes features in real-time using efficient in-memory computations and cached model predictions.</p>
+                
+          <h3>A/B Testing Infrastructure</h3>
+                <p>A robust experimentation platform was developed to support week-on-week metrics analysis. The system includes experiment configuration management, traffic allocation algorithms, statistical significance testing, and automated reporting. The platform ensures proper randomization and maintains experiment isolation to prevent cross-contamination.</p>
+                
+                <h3>Google Ads Integration Pipeline</h3>
+                <p>The integration pipeline handles OAuth authentication, rate limiting, and bulk data processing for Google Ads campaigns. Worker pools manage concurrent API requests while respecting API quotas. The system includes retry mechanisms, error handling, and comprehensive logging for debugging and monitoring.</p>
+                
+                <h3>Multi-layer Caching Strategy</h3>
+                <p>A sophisticated caching architecture combines in-memory caching for frequently accessed data with Redis for distributed caching across service instances. Cache invalidation strategies ensure data consistency while maximizing hit rates. The caching layer contributed significantly to the 97.3% reduction in database read operations.</p>
+                
+                <h3>Performance Optimization Techniques</h3>
+                <p>Several optimization techniques were implemented including connection pooling, batch processing, asynchronous operations, and efficient data serialization. Database queries were optimized using proper indexing strategies and query pattern analysis. The system architecture supports horizontal scaling through stateless service design.</p>
+            </div>
+
+            <!-- Detailed Content for Section 3 -->
+            <div class="content-section" data-section="3">
+                <h2>A/B Testing Methodology and Implementation</h2>
+                <p>The A/B testing framework represents a comprehensive approach to experimental design in production systems, enabling data-driven decision making for content discovery optimization.</p>
+                
+                <h3>Experimental Design Principles</h3>
+                <p>All experiments followed rigorous statistical design principles including proper sample size calculation, randomization techniques, and multiple hypothesis testing corrections. Each experiment was designed with clear success metrics, minimum detectable effects, and statistical power analysis to ensure meaningful results.</p>
+                
+                <h3>CTR-based Optimization (exp1-cg)</h3>
+                <p>The control group experiment focused on click-through rate optimization for rail positioning. This baseline approach used historical CTR data to rank content rails, providing a benchmark for comparison with more sophisticated ranking methods. The implementation tracked click events, calculated CTR metrics, and adjusted rankings based on sliding window calculations.</p>
+                
+                <h3>OTR-based Ranking (exp1-tg)</h3>
+                <p>The target group implemented order-through rate ranking to optimize for actual conversions rather than just clicks. This approach considered the complete user journey from content discovery to purchase completion. The system tracked conversion funnels, calculated OTR metrics, and weighted rankings based on revenue impact rather than engagement alone.</p>
+                
+                <h3>Geographic Personalization (exp2-tg)</h3>
+                <p>This experiment utilized S2 cell-based geographic indexing at depth 13 for location-aware content personalization. The S2 geometry library provided efficient spatial indexing, enabling real-time geographic matching. User locations were mapped to S2 cells, and content was ranked based on geographic relevance, local popularity, and regional preferences.</p>
+                
+                <h3>City-wise Property Ranking</h3>
+                <p>The city-based ranking experiment leveraged property metadata signals to customize content ordering. This approach considered city-specific characteristics such as demographics, economic indicators, cultural preferences, and seasonal patterns. The ranking algorithm incorporated these signals through feature engineering and weighted scoring mechanisms.</p>
+                
+                <h3>Statistical Analysis and Results Interpretation</h3>
+                <p>Results were analyzed using appropriate statistical tests including chi-square tests for categorical outcomes and t-tests for continuous metrics. Confidence intervals were calculated for all measurements, and multiple comparison corrections were applied where necessary. The analysis included both statistical significance and practical significance evaluation.</p>
+                
+                <h3>Lessons Learned from Experimentation</h3>
+                <p>The experimental process revealed important insights about user behavior, content preferences, and system performance trade-offs. Some experiments showed unexpected results, highlighting the importance of rigorous testing before implementing changes in production systems.</p>
+            </div>
+
+            <!-- Detailed Content for Section 4 -->
+            <div class="content-section" data-section="4">
+                <h2>Deep Link Resolution System</h2>
+                <p>The deep link resolution system addresses critical attribution challenges in mobile marketing campaigns by creating a seamless connection between advertising campaigns and app content.</p>
+                
+                <h3>Problem Statement and Motivation</h3>
+                <p>Traditional app attribution systems often fail to provide accurate tracking for advertising campaigns, leading to inefficient marketing spend and poor user experience. With over 2 crore unique ads in the system and initially only ~28,000 having valid deep links, there was a significant opportunity for improvement in attribution coverage.</p>
+                
+                <h3>Deferred Deep Link Architecture</h3>
+                <p>The deferred deep link system implements a sophisticated matching algorithm that connects advertising campaigns with app content even when direct deep links are unavailable. The system uses content metadata, campaign parameters, and machine learning techniques to establish these connections probabilistically.</p>
+                
+                <h3>Google Ads API Integration</h3>
+                <p>The integration with Google Ads API required careful handling of OAuth authentication, API rate limits, and bulk data processing. The system implements robust error handling, retry mechanisms, and monitoring to ensure reliable data synchronization. Campaign data is processed in batches using worker pools to optimize throughput while respecting API constraints.</p>
+                
+                <h3>AppsFlyer Attribution Integration</h3>
+                <p>AppsFlyer integration enables comprehensive attribution tracking across multiple marketing channels. The system forwards attribution events, handles callback processing, and maintains attribution data consistency. Real-time event processing ensures timely attribution reporting for marketing optimization.</p>
+                
+                <h3>Content Matching Algorithms</h3>
+                <p>The content matching system uses multiple signals including text similarity, category matching, geographic relevance, and temporal patterns to establish connections between ads and app content. Machine learning models are trained on historical successful matches to improve matching accuracy over time.</p>
+                
+                <h3>Performance and Scale Considerations</h3>
+                <p>The system processes millions of attribution events daily, requiring efficient data structures and algorithms. Caching strategies reduce latency for frequent lookups, while batch processing optimizes throughput for bulk operations. The architecture supports horizontal scaling to handle growing attribution volume.</p>
+                
+                <h3>Impact on Marketing Effectiveness</h3>
+                <p>The improved attribution system enables more accurate measurement of marketing campaign performance, leading to better budget allocation and campaign optimization. Enhanced deep link coverage improves user experience by directing users to relevant content within the app.</p>
+            </div>
+
+            <!-- Detailed Content for Section 5 -->
+            <div class="content-section" data-section="5">
+                <h2>Database Optimization and Cost Reduction</h2>
+                <p>The database optimization project achieved a remarkable 97.3% reduction in DynamoDB read costs through systematic analysis and architectural improvements.</p>
+                
+                <h3>Initial Performance Analysis</h3>
+                <p>The system initially consumed over 128 million Read Capacity Units (RCUs) daily, resulting in significant operational costs. Performance analysis revealed inefficient query patterns, lack of appropriate caching, and suboptimal data access patterns as primary cost drivers.</p>
+                
+                <h3>Query Pattern Optimization</h3>
+                <p>Detailed analysis of database access patterns identified opportunities for query optimization. Hot partitions were redistributed, composite keys were restructured for better access patterns, and frequently accessed data was denormalized for single-query retrieval. These changes significantly reduced the number of database operations required for common use cases.</p>
+                
+                <h3>Multi-layer Caching Implementation</h3>
+                <p>A sophisticated caching architecture was implemented with multiple layers:</p>
+                <ul>
+                    <li><strong>Application-level caching:</strong> In-memory caches for frequently accessed data with configurable TTL and LRU eviction policies.</li>
+                    <li><strong>Distributed caching:</strong> Redis clusters for shared cache across service instances, enabling cache consistency and reducing cold start penalties.</li>
+                    <li><strong>Query result caching:</strong> Caching of expensive query results with intelligent invalidation based on data freshness requirements.</li>
+                </ul>
+                
+                <h3>Worker Pool Architecture</h3>
+                <p>The implementation of worker pool patterns optimized concurrent database operations. Connection pooling reduced connection overhead, while batch processing minimized the number of round trips to the database. Worker pools were sized based on database capacity and application requirements to maximize throughput without overwhelming the database.</p>
+                
+                <h3>Data Structure Optimization</h3>
+                <p>Data structures were redesigned to minimize storage requirements and optimize access patterns. Sparse indexes were implemented for optional fields, and data compression techniques reduced storage costs. Schema design followed DynamoDB best practices for partition key distribution and sort key utilization.</p>
+                
+                <h3>Monitoring and Alerting</h3>
+                <p>Comprehensive monitoring was implemented to track database performance metrics, cache hit rates, and cost trends. Grafana dashboards provide real-time visibility into system performance, while alerts notify operators of anomalous patterns that could indicate performance regressions.</p>
+                
+                <h3>Cost-Benefit Analysis</h3>
+                <p>The optimization efforts resulted in monthly savings of tens of thousands of rupees while maintaining system performance and reliability. The return on investment was immediate, with the reduced operational costs significantly outweighing the development effort required for optimization.</p>
+            </div>
+
+            <!-- Detailed Content for Section 6 -->
+            <div class="content-section" data-section="6">
+                <h2>Machine Learning Integration and Ranking Algorithm</h2>
+                <p>The machine learning integration project replaced static dashboard configurations with dynamic, ML-driven rail ranking systems that adapt to user behavior and content performance in real-time.</p>
+                
+                <h3>Feature Engineering Pipeline</h3>
+                <p>A comprehensive feature engineering pipeline extracts relevant signals from user interactions, content metadata, and contextual information. Features include user engagement metrics (clicks, time spent, conversion rates), content characteristics (freshness, popularity, category), geographic signals, and temporal patterns. Feature engineering includes normalization, encoding categorical variables, and creating interaction features.</p>
+                
+                <h3>Real-time Feature Extraction</h3>
+                <p>The system implements real-time feature extraction to ensure ranking decisions are based on current data. Streaming data processing pipelines compute features with low latency, while feature stores maintain feature consistency across different services. The architecture supports both batch and real-time feature computation depending on feature characteristics and latency requirements.</p>
+                
+                <h3>Ranking Algorithm Development</h3>
+                <p>The ranking algorithm uses machine learning models trained on historical engagement data to predict content relevance for individual users. Multiple model architectures were evaluated including linear models, gradient boosting, and neural networks. The final implementation uses ensemble methods combining multiple models to improve prediction accuracy and robustness.</p>
+                
+                <h3>Model Training and Validation</h3>
+                <p>Model training follows rigorous machine learning practices including proper train/validation/test splits, cross-validation, and hyperparameter optimization. Feature importance analysis ensures model interpretability, while regularization techniques prevent overfitting. Model performance is evaluated using relevant metrics such as precision, recall, and ranking quality measures like NDCG.</p>
+                
+                <h3>A/B Testing for ML Models</h3>
+                <p>The ML ranking system was validated through controlled A/B experiments comparing ML-based rankings with existing static configurations. Experiments measured user engagement metrics, conversion rates, and overall user satisfaction. Statistical analysis ensured that observed improvements were statistically significant and practically meaningful.</p>
+                
+                <h3>Production Deployment and Monitoring</h3>
+                <p>The ML system was deployed using robust MLOps practices including model versioning, gradual rollout, and performance monitoring. Model performance is continuously monitored for drift detection, and retraining procedures ensure model freshness. The system includes fallback mechanisms to maintain service availability even if ML components fail.</p>
+                
+                <h3>Personalization and Geographic Adaptation</h3>
+                <p>The ML system incorporates personalization signals to customize rankings for individual users and geographic regions. User behavior patterns, location-based preferences, and regional content popularity influence ranking decisions. The system balances personalization with content diversity to avoid filter bubbles while improving relevance.</p>
+                
+                <h3>Impact on Content Discovery</h3>
+                <p>The ML-driven ranking system significantly improved content discovery effectiveness, leading to increased user engagement and satisfaction. The dynamic nature of ML rankings allows the system to adapt to changing user preferences and content trends, providing a more responsive and relevant user experience.</p>
+            </div>
+
+            <!-- Detailed Content for Section 7 -->
+            <div class="content-section" data-section="7">
+                <h2>Performance Results and Business Impact Analysis</h2>
+                <p>The project delivered measurable improvements across multiple business metrics while achieving significant cost reductions and operational efficiencies.</p>
+                
+                <h3>A/B Test Results by Content Category</h3>
+                <p>Detailed analysis of A/B test results reveals varying performance across different content categories:</p>
+                <ul>
+                    <li><strong>Artist Content:</strong> 0.38% improvement in engagement metrics, indicating modest but positive impact of the new ranking algorithm for artist-related content.</li>
+                    <li><strong>Event Content:</strong> 9.39% improvement, the highest performing category, suggesting that ML-based ranking is particularly effective for event discovery and recommendation.</li>
+                    <li><strong>Movie Content:</strong> 0.57% improvement, showing consistent positive impact similar to artist content.</li>
+                    <li><strong>Gig Content:</strong> -0.34% decrease, indicating that the optimization had trade-offs for this content type, possibly due to different user behavior patterns.</li>
+                    <li><strong>Restaurant Content:</strong> -10.00% decrease, the most significant negative impact, suggesting that restaurant discovery may require different optimization approaches.</li>
+                </ul>
+                
+                <h3>Cost Reduction Analysis</h3>
+                <p>The database optimization efforts yielded exceptional results with a 97.3% reduction in DynamoDB read costs. This improvement translates to tens of thousands of rupees in monthly savings, demonstrating the business value of technical optimization. The cost reduction was achieved without compromising system performance or reliability, making it a clear operational success.</p>
+                
+                <h3>Deep Link Attribution Improvements</h3>
+                <p>The deep link resolution system substantially increased attribution coverage from the initial ~28,000 ads with valid deep links out of 2 crore total unique ads. The improved attribution enables better marketing campaign optimization and provides more accurate ROI measurements for advertising spend.</p>
+                
+                <h3>System Performance Metrics</h3>
+                <p>Key performance indicators show consistent improvements across the board:</p>
+                <ul>
+                    <li>Response latency reduced through caching optimizations</li>
+                    <li>System throughput increased via worker pool implementations</li>
+                    <li>Error rates decreased through improved error handling and retry mechanisms</li>
+                    <li>Resource utilization optimized through efficient algorithms and data structures</li>
+                </ul>
+                
+                <h3>User Experience Impact</h3>
+                <p>Improved content discovery effectiveness translates to better user experience through more relevant content recommendations, faster content loading, and more accurate attribution of user actions. The ML-driven personalization provides users with content that better matches their preferences and context.</li>
+                
+                <h3>Operational Excellence Improvements</h3>
+                <p>The project established robust operational practices including comprehensive monitoring, alerting, and debugging capabilities. Structured logging and distributed tracing enable efficient problem diagnosis and resolution. The modular architecture supports easier maintenance and feature development.</p>
+                
+                <h3>Long-term Business Value</h3>
+                <p>Beyond immediate performance improvements, the project established a foundation for continuous optimization through the A/B testing platform, ML infrastructure, and scalable architecture. These capabilities enable ongoing improvements and adaptation to changing business requirements.</p>
+            </div>
+
+            <!-- Detailed Content for Section 8 -->
+            <div class="content-section" data-section="8">
+                <h2>Future Work, Conclusions, and Learning Outcomes</h2>
+                <p>This project successfully demonstrated the application of advanced software engineering, machine learning, and experimental design principles in a production environment, while identifying numerous opportunities for future enhancement.</p>
+                
+                <h3>Planned Future Enhancements</h3>
+                <p>Several promising directions for future work have been identified:</p>
+                
+                <h4>User-specific Personalization</h4>
+                <p>Advanced personalization incorporating individual browsing history, time-based preferences, and behavioral patterns will further improve content relevance. This includes developing user embeddings, implementing collaborative filtering, and creating dynamic user profiles that evolve with user behavior.</p>
+                
+                <h4>Multivariate Experimentation</h4>
+                <p>Expanding beyond A/B testing to multivariate experiments will enable testing multiple variables simultaneously, leading to more efficient optimization. Automated winner selection algorithms will reduce manual intervention in experiment management and accelerate optimization cycles.</p>
+                
+                <h4>Real-time Deep Link Syncing</h4>
+                <p>Implementing webhook-based real-time synchronization will eliminate delays in deep link updates and improve attribution accuracy. This system will process attribution events as they occur, providing immediate feedback for marketing optimization.</p>
+                
+                <h4>Cross-platform Expansion</h4>
+                <p>Extending the system to additional verticals such as travel and groceries will validate the generalizability of the architecture and algorithms. This expansion will require vertical-specific customizations while maintaining the core system's flexibility and scalability.</p>
+                
+                <h3>Technical Learning Outcomes</h3>
+                <p>The project provided extensive hands-on experience with modern software development practices:</p>
+                <ul>
+                    <li><strong>Go Programming Mastery:</strong> Developed expertise in Go for high-performance backend development, including concurrency patterns, memory management, and performance optimization.</li>
+                    <li><strong>Database Optimization:</strong> Gained deep understanding of DynamoDB optimization techniques, caching strategies, and distributed system design principles.</li>
+                    <li><strong>API Integration:</strong> Mastered third-party API integration patterns with proper error handling, rate limiting, and monitoring for systems like Google Ads and AppsFlyer.</li>
+                    <li><strong>A/B Testing:</strong> Learned experimental design principles, statistical analysis techniques, and the practical challenges of running experiments in production systems.</li>
+                </ul>
+                
+                <h3>Professional Development</h3>
+                <p>Beyond technical skills, the internship provided valuable professional experience:</p>
+                <ul>
+                    <li><strong>Cross-functional Collaboration:</strong> Worked effectively with product managers, data scientists, and other engineering teams to deliver complex projects.</li>
+                    <li><strong>Impact Prioritization:</strong> Learned to evaluate and prioritize work based on business impact and technical feasibility in fast-paced environments.</li>
+                    <li><strong>Production System Operations:</strong> Gained experience with debugging production issues, monitoring system health, and maintaining service reliability.</li>
+                    <li><strong>End-to-end Understanding:</strong> Developed comprehensive understanding of discovery systems at scale, from user requirements to implementation details.</li>
+                </ul>
+                
+                <h3>Project Conclusions</h3>
+                <p>This B.Tech project successfully bridged theoretical computer science concepts with practical industry applications. The combination of machine learning, experimental design, and systems engineering resulted in measurable business impact while providing comprehensive learning experiences.</p>
+                
+                <p>The 97.3% cost reduction achievement demonstrates the value of systematic optimization and engineering excellence. The successful implementation of ML-based ranking systems shows the practical application of artificial intelligence in production environments. The robust A/B testing framework establishes a foundation for continuous improvement and data-driven decision making.</p>
+                
+                <p>The project's success validates the importance of combining technical excellence with business understanding, experimental rigor with practical implementation, and individual contribution with team collaboration. These lessons will be invaluable for future career development in software engineering and technology leadership roles.</p>
+                
+                <h3>Acknowledgments</h3>
+                <p>Special thanks to Dr. Saurabh Shukla for academic guidance, the Search and Discovery team at Eternal for mentorship and collaboration, and the Indian Institute of Information Technology, Lucknow for providing the educational foundation that made this project possible.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
